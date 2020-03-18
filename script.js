@@ -1,7 +1,7 @@
 const particles=[];
 function setup()
 {
-    createCanvas(600,500);
+    createCanvas(2*window.innerWidth/3,2*window.innerHeight/3);
     const particlesLength=Math.floor(window.innerWidth/10);
     for(let i=0;i<particlesLength;i++)
     {
@@ -31,8 +31,8 @@ class Particle {
     accelerations()
     {
             
-        this.vel.x+=accelerationX*0.05;
-        this.vel.y+=accelerationY*0.05;
+        this.pos.x+=accelerationX*0.05;
+        this.pos.y+=accelerationY*0.05;
     }
     edges()
     {
@@ -41,6 +41,10 @@ class Particle {
         }
         if(this.pos.y>height){
             this.pos.y=0;
+       }
+       if(this.pos.y<0)
+       {
+           this.pos.y=height;
        }
     }
     //movement
