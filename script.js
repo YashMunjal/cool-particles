@@ -8,7 +8,6 @@ function setup()
         particles.push(new Particle());
     }
 }
-var x=0,y=0;
 function draw()
 {   
     background(3, 51, 90);
@@ -24,7 +23,7 @@ class Particle {
         //position
         this.pos=createVector(random(width),random(height));
         //vel
-        this.vel=createVector(random(x,y),random(5,3));
+        this.vel=createVector(random(0,0),random(5,3));
         //size 
         this.size=12;
     }
@@ -32,8 +31,8 @@ class Particle {
     accelerations()
     {
             
-    x+=accelerationX*0.001;
-    y+=accelerationY*0.001;
+        this.vel.x+=accelerationX*0.05;
+        this.vel.y+=accelerationY*0.05;
     }
     edges()
     {
