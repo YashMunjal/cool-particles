@@ -1,7 +1,7 @@
 const particles=[];
 function setup()
 {
-    createCanvas(window.innerWidth,window.innerHeight);
+    createCanvas(window.innerWidth/2,window.innerHeight/2);
     const particlesLength=Math.floor(window.innerWidth/10);
     for(let i=0;i<particlesLength;i++)
     {
