@@ -31,8 +31,8 @@ class Particle {
     accelerations()
     {
             
-        this.vel.x=accelerationX*0.05;
-        this.vel.y=accelerationY*0.05;
+        this.vel.x+=accelerationX*0.05;
+        this.vel.y+=accelerationY*0.05;
         var xColor=random(0,255),yColor=random(0,255),zColor=random(0,255);
         fill(xColor,yColor,zColor,0.5);
     }
